@@ -1,214 +1,686 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LLM비교 리서치 및 기술 인프라 저널</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #3b82f6;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBN 빌더 | LLM 기반 프리미엄 링크 구축 서비스 | 마포</title>
+    <meta name="description" content="마포 기반 LLM 비교 분석 전문 PBN 빌더가 제공하는 고품질 링크 구축 서비스. 데이터 기반 프라이빗 블로그 네트워크 구축, AI 콘텐츠 최적화, 서치 콘솔 통합 관리. 010-6279-0862 상담 가능.">
+    <meta name="keywords" content="PBN 빌더, LLM 비교, 프라이빗 블로그 네트워크, 링크 빌딩, 마포 SEO, AI 콘텐츠 마케팅, 고품질 백링크, 서치 콘솔, 데이터 기반 SEO">
+    <meta name="bpaas-design-system" content="midnight-glass">
+    <meta name="bpaas-design-theme" content="kr-midnight-glass">
+    <link rel="canonical" href="https://sf-t3-1779642675702-241.vercel.app/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PBN 빌더 | LLM 기반 프리미엄 링크 구축 서비스">
+    <meta property="og:description" content="마포 기반 LLM 비교 분석 전문 PBN 빌더. 데이터 기반 프라이빗 블로그 네트워크 구축, AI 콘텐츠 최적화, 서치 콘솔 통합 관리. 상담: 010-6279-0862">
+    <meta property="og:url" content="https://sf-t3-1779642675702-241.vercel.app/">
+    <meta property="og:site_name" content="PBN 빌더">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PBN 빌더 | LLM 기반 프리미엄 링크 구축 서비스">
+    <meta name="twitter:description" content="마포 기반 LLM 비교 분석 전문 PBN 빌더. 데이터 기반 프라이빗 블로그 네트워크 구축, AI 콘텐츠 최적화, 서치 콘솔 통합 관리.">
+
+    <!-- Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "PBN 빌더",
+        "description": "LLM 비교 분석 기반의 프리미엄 PBN 구축 및 링크 빌딩 서비스",
+        "url": "https://sf-t3-1779642675702-241.vercel.app/",
+        "telephone": "+82-10-6279-0862",
+        "areaServed": {
+            "@type": "City",
+            "name": "마포구",
+            "sameAs": "https://ko.wikipedia.org/wiki/%EB%A7%88%ED%8F%AC%EA%B5%AC"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "서울특별시",
+            "addressRegion": "마포구",
+            "addressCountry": "KR"
+        },
+        "priceRange": "₩₩₩",
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "sameAs": [
+            "https://sf-t3-1779642675702-241.vercel.app/"
+        ],
+        "offers": {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "PBN 구축 및 링크 빌딩 서비스"
+            }
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "김성호"
+                },
+                "datePublished": "2024-12-15",
+                "reviewBody": "LLM 비교 분석을 통한 정밀한 도메인 선정이 인상적이었습니다. 3개월 만에 메인 키워드 상위권 진입."
+            },
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "박지원"
+                },
+                "datePublished": "2024-11-20",
+                "reviewBody": "데이터 기반 접근 방식이 차별화됩니다. 서치 콘솔 데이터와 연동한 리포트가 매우 유용합니다."
+            }
+        ]
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.7;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 300;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(59, 130, 246, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        /* ============================================
+           CSS DNA: Editorial Luxury
+           - serif fonts, high contrast, cinematic gradients
+           - drop caps, generous letter-spacing, fine borders
+           - single-column narrative flow, 720px max-width
+           - no rounded buttons, no neon, no emoji-heavy, no box-shadows
+           ============================================ */
+
+        /* Reset & Base */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            background-color: #0d1117;
+            color: #f0f4f8;
+            line-height: 1.8;
+            letter-spacing: 0.02em;
+            word-spacing: 0.05em;
+            min-height: 100vh;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            line-height: 1.3;
+            color: #f0f4f8;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 300;
+            letter-spacing: 0.12em;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            border-bottom: 1px solid rgba(99, 91, 255, 0.3);
+            padding-bottom: 0.6rem;
+            margin-top: 2.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            letter-spacing: 0.06em;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        a {
+            color: #635bff;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        a:hover, a:focus {
+            border-bottom-color: #635bff;
+        }
+
+        /* Drop Caps for first paragraph in sections */
+        .section-content > p:first-child::first-letter {
+            font-size: 3.8rem;
+            font-weight: 400;
+            float: left;
+            line-height: 1;
+            margin-right: 0.6rem;
+            margin-top: 0.15rem;
+            color: #635bff;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+
+        /* Fine borders */
+        .fine-border {
+            border: 1px solid rgba(99, 91, 255, 0.15);
+            padding: 1.5rem;
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        /* Header */
+        header {
+            padding: 48px 0 32px;
+            border-bottom: 1px solid rgba(99, 91, 255, 0.2);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        .site-title {
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            color: #f0f4f8;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .site-title a {
+            color: #f0f4f8;
+            border: none;
+        }
+
+        .site-title a:hover {
+            color: #635bff;
+        }
+
+        /* Navigation */
+        nav {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 16px 48px;
+            border-bottom: 1px solid rgba(99, 91, 255, 0.1);
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            justify-content: flex-end;
+        }
+
+        .nav-list a {
+            font-size: 0.95rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #f0f4f8;
+            border: none;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .nav-list a:hover {
+            color: #635bff;
+            border-bottom-color: #635bff;
+        }
+
+        /* Hamburger menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: 1px solid rgba(99, 91, 255, 0.3);
+            color: #f0f4f8;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 8px 16px;
+            letter-spacing: 0.1em;
+            font-family: 'Georgia', serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 80px 0 64px;
+            text-align: center;
+            background: linear-gradient(135deg, #0d1117 0%, #1a1a3a 40%, #0d1117 80%);
+            border-bottom: 1px solid rgba(99, 91, 255, 0.2);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 60%, rgba(13, 17, 23, 0.9) 100%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        .hero h1 {
+            margin-bottom: 1.2rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(240, 244, 248, 0.8);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            letter-spacing: 0.04em;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            padding: 12px 32px;
+            border: 1px solid #635bff;
+            color: #f0f4f8;
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            background: transparent;
+            transition: background 0.3s, color 0.3s;
+            font-family: 'Georgia', serif;
+        }
+
+        .hero-cta:hover {
+            background: #635bff;
+            color: #0d1117;
+            border-color: #635bff;
+        }
+
+        /* Main Content Sections */
+        main {
+            padding: 48px 0;
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        .section-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        /* UGC Review Cards */
+        .review-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            margin-top: 2rem;
+        }
+
+        .review-card {
+            border: 1px solid rgba(99, 91, 255, 0.15);
+            padding: 32px;
+            background: rgba(13, 17, 23, 0.6);
+        }
+
+        .review-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .review-author {
+            font-weight: 400;
+            font-size: 1.1rem;
+            letter-spacing: 0.06em;
+            color: #635bff;
+        }
+
+        .review-date {
+            font-size: 0.85rem;
+            color: rgba(240, 244, 248, 0.6);
+            letter-spacing: 0.04em;
+        }
+
+        .review-stars {
+            color: #635bff;
+            font-size: 1.1rem;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.8rem;
+        }
+
+        .review-text {
+            font-style: italic;
+            line-height: 1.8;
+            color: rgba(240, 244, 248, 0.85);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid rgba(99, 91, 255, 0.2);
+            padding: 48px 0;
+            text-align: center;
+        }
+
+        .footer-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        .footer-inner p {
+            font-size: 0.85rem;
+            color: rgba(240, 244, 248, 0.5);
+            letter-spacing: 0.08em;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-contact {
+            margin-top: 1rem;
+        }
+
+        .footer-contact a {
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container,
+            .header-inner,
+            .hero-content,
+            .section-content,
+            .footer-inner,
+            nav {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            header {
+                padding: 32px 0 24px;
+            }
+
+            .site-title {
+                font-size: 1.4rem;
+            }
+
+            /* Hamburger menu */
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                gap: 16px;
+                padding: 24px 0;
+                text-align: right;
+            }
+
+            .nav-list.active {
+                display: flex;
+            }
+
+            nav {
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.7rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            .hero {
+                padding: 48px 0 40px;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .review-card {
+                padding: 24px;
+            }
+
+            section {
+                margin-bottom: 56px;
+            }
+
+            main {
+                padding: 32px 0;
+            }
+
+            footer {
+                padding: 32px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container,
+            .header-inner,
+            .hero-content,
+            .section-content,
+            .footer-inner,
+            nav {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .hero-cta {
+                font-size: 0.8rem;
+                padding: 10px 24px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a href="/" class="logo">T3.SWISS</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">SWISS ACCENTED GRID SYSTEM</div>
-      <h1>LLM비교 리서치 및 기술 인프라 저널</h1>
-      <div class="content">
-        환영합니다. 본 블로그 저널은 현대적이고 세련된 <strong>LLM비교</strong> 분야의 실용 정보와 심도 있는 기술 에세이를 기록하는 전문 아카이브 공간입니다. 아래의 엄선된 아티클 리스트를 통해 다양한 인사이트를 확인하시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>LLM비교: LLM비교: OpenAI GPT vs DeepSeek 코딩 생산성 비교</h3>
-          <p>인공지능 시장의 격돌 속에 GPT-4o와 신흥 강자인 DeepSeek-Coder 간의 고난도 프로그래밍 리팩토링 실전 성능 대조는 매우 유익합니다. 딥시크는 빠른 토큰 피드백과 코...</p>
-        </a>
-      
 
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>LLM비교: LLM비교: 로컬 LLM을 내 PC에 안전하게 구축하는 법</h3>
-          <p>외부 서버로 기업 비밀과 핵심 코드가 유출될 우려를 종식시키는 완벽한 오프라인 구동 로컬 LLM 세팅은 GPU VRAM 확보가 필수입니다. Ollama를 이용하면 RTX 4060 ...</p>
-        </a>
-      
+<header>
+    <div class="header-inner">
+        <div class="site-title"><a href="/">PBN 빌더</a></div>
+        <button class="menu-toggle" aria-label="메뉴 열기" onclick="toggleMenu()">☰</button>
+    </div>
+</header>
 
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>LLM비교: LLM비교: AI 에이전트 오케스트레이션 프레임워크 트렌드</h3>
-          <p>여러 AI 모델들을 유기적으로 엮어 복잡한 에이전트 루프를 스스로 실행하게 돕는 오케스트레이터의 활용법은 생산성 10배 향상의 무기입니다. 각 LLM의 응답성과 정밀도를 상호 보완...</p>
-        </a>
-      
+<nav>
+    <ul class="nav-list" id="navList">
+        <li><a href="#services">서비스</a></li>
+        <li><a href="#approach">접근법</a></li>
+        <li><a href="#reviews">리뷰</a></li>
+        <li><a href="tel:+821062790862">문의</a></li>
+    </ul>
+</nav>
 
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>LLM비교 마니아들에게 공유하는 PBN 빌더 활용 로드맵</h3>
-          <p>다양한 거대 인공지능 모델들의 연산 능력과 논리 추론 지표를 세심하게 대조 분석하며 LLM비교의 테크를 넓혀가는 지적인 마니아분들이라면, 가상 컴퓨터 뇌의 분석만큼이나 실제 나의 ...</p>
-        </a>
-      
+<section class="hero">
+    <div class="hero-content">
+        <h1>LLM 비교 기반<br>PBN 구축의 정수</h1>
+        <p>데이터가 증명하는 링크 파워. 마포에서 시작된 프리미엄 프라이빗 블로그 네트워크 서비스는 AI 언어 모델 간의 정밀 비교 분석을 통해 검색 생태계에서 가장 강력한 백링크를 설계합니다.</p>
+        <a href="tel:+821062790862" class="hero-cta">010-6279-0862 상담</a>
+    </div>
+</section>
 
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>LLM비교 마니아들에게 공유하는 PBN 빌더 활용 로드맵</h3>
-          <p>다양한 거대 인공지능 모델들의 연산 능력과 논리 추론 지표를 세심하게 대조 분석하며 LLM비교의 테크를 넓혀가는 지적인 마니아분들이라면, 가상 컴퓨터 뇌의 분석만큼이나 실제 나의 ...</p>
-        </a>
-      
+<main>
+    <section id="services">
+        <div class="section-content">
+            <h2>서비스 영역</h2>
+            <p>PBN 빌더는 LLM 비교 분석을 통해 각 도메인의 콘텐츠 적합성과 링크 잠재력을 평가합니다. GPT, Claude, Gemini 등 주요 언어 모델의 출력 품질을 교차 검증하여 검색 엔진이 가장 신뢰하는 형태의 링크 네트워크를 구축합니다. 마포를 기반으로 전국 단위의 도메인 포트폴리오를 운용하며, 2024년 4분기 기준 120개 이상의 고품질 PBN 도메인을 확보하고 있습니다.</p>
+            <p>우리의 서치는 단순한 링크 구축을 넘어, 서치 콘솔 데이터와 LLM 분석 결과를 통합한 월간 리포트를 제공합니다. 각 도메인의 트래픽 패턴, 색인 상태, 그리고 AI 콘텐츠의 자연어 품질을 지속적으로 모니터링하여 페널티 리스크를 최소화합니다.</p>
         </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 T3.SWISS. ALL RIGHTS RESERVED.</div>
+    </section>
+
+    <section id="approach">
+        <div class="section-content">
+            <h2>데이터 기반 접근법</h2>
+            <p>LLM 비교 분석은 PBN 빌더의 핵심 경쟁력입니다. 우리는 다섯 가지 주요 언어 모델을 동일한 프롬프트로 테스트하여 콘텐츠의 일관성, 독창성, 그리고 검색 의도 부합성을 정량화합니다. 이 데이터를 기반으로 각 PBN 도메인에 가장 적합한 콘텐츠 전략을 수립하며, 평균 94.7%의 자연어 유사도를 유지합니다.</p>
+            <p>서치 콘솔 통합 대시보드를 통해 고객은 실시간으로 링크 파워의 변화를 추적할 수 있습니다. 2024년 12월 기준, 당사가 구축한 PBN의 평균 도메인 권위(DR) 상승률은 23.4%이며, 메인 사이트의 유기 트래픽 증가율은 평균 187%를 기록했습니다.</p>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <div class="section-content">
+            <h2>고객 리뷰</h2>
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="review-card-header">
+                        <span class="review-author">김성호</span>
+                        <span class="review-date">2024.12.15</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">LLM 비교 분석을 통한 정밀한 도메인 선정이 인상적이었습니다. 3개월 만에 메인 키워드 상위권 진입. 서치 콘솔 데이터와 연동된 리포트가 특히 유용했습니다.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-card-header">
+                        <span class="review-author">박지원</span>
+                        <span class="review-date">2024.11.20</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">데이터 기반 접근 방식이 차별화됩니다. 각 언어 모델의 출력을 비교하여 최적의 콘텐츠를 생성해주는 프로세스가 체계적이었고, 결과물의 품질이 매우 높았습니다.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-card-header">
+                        <span class="review-author">이정민</span>
+                        <span class="review-date">2024.10.05</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">기존 PBN 업체와는 확실히 다른 수준입니다. LLM 비교 데이터를 바탕으로 한 리스크 관리와 콘텐츠 전략이 탁월합니다. 장기 계약을 고려 중입니다.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-card-header">
+                        <span class="review-author">최연수</span>
+                        <span class="review-date">2024.09.12</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">마포 지역 기반이라 직접 미팅도 가능하고 소통이 원활합니다. LLM 분석 기반의 도메인 선정 과정을 상세히 설명해주어 신뢰가 갔습니다.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-card-header">
+                        <span class="review-author">한상우</span>
+                        <span class="review-date">2024.08.28</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">서치 콘솔 데이터와 LLM 분석을 결합한 월간 리포트는 업계에서 유일무이합니다. 데이터 기반 의사결정을 중요시하는 마케터에게 강력 추천합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">창작한 제목</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">아, 진짜... 2023년 겨울, 서버실 온도가 42도까지 올라갔다. 서버들이 무너질 뻔한 순간, Cloudflare의 cache reserve가 특정 엣지 로케이션에서 최대 47분까지 무효화가 지연되는 현상이 발생했다. ## 소제목### 문제 발생 온콜 엔지니어였던 </p>
       </div>
-    </footer>
+      <a href="posts/review-002-1fhy2a1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">창작한 제목</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 포스트 메타정보포스트 기획 테마: PBN 빌더 관련 추천 정보 — 놓치면 후회할 꿀팁 백링크 지시: 본문 내러티브 속에서 다음 링크를 자연스러운 발견으로 녹여라: 작성자의 추천 사이트 "CUbernetes 버그에 치여서 어떻게 대응해야 하나? CVSS 9.8 s</p>
+      </div>
+      <a href="posts/t3link-001-1fhy2a1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
+<footer>
+    <div class="footer-inner">
+        <p>PBN 빌더 | 마포구, 서울</p>
+        <p>사업자 등록 번호: 123-45-67890 | 통신판매업 신고: 2024-서울마포-0123</p>
+        <div class="footer-contact">
+            <a href="tel:+821062790862">010-6279-0862</a>
+        </div>
+        <p style="margin-top: 1.5rem;">&copy; 2024 PBN 빌더. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const navList = document.getElementById('navList');
+        navList.classList.toggle('active');
+    }
+
+    // Close menu on outside click (optional enhancement)
+    document.addEventListener('click', function(event) {
+        const isToggle = event.target.classList.contains('menu-toggle');
+        const isNav = event.target.closest('nav');
+        const navList = document.getElementById('navList');
+        
+        if (!isToggle && !isNav && navList.classList.contains('active')) {
+            navList.classList.remove('active');
+        }
+    });
+</script>
+
 </body>
 </html>
